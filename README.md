@@ -86,7 +86,7 @@ sequenceDiagram
 
 ## Topics addressed
 
-*Explain how you addressed the topics presented in the **guidelines LINK**, filling in the template below.*
+*Explain how you addressed the topics presented in the [guidelines](https://www.bk.admin.ch/bk/de/home/politische-rechte/e-collecting/aktuelles.html), filling in the template below.*
 
 | Topic | (How) is it addressed? |
 | -| ------- |

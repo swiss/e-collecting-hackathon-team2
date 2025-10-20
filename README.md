@@ -1,4 +1,4 @@
-# E-Collecting Hackathon – 2 E-Collecting vom bestehenden Stimmregister aus gedacht
+# 2) E-Collecting vom bestehenden Stimmregister aus gedacht
 
 
 *Over the course of two days, you will develop your solution for collecting electronic signatures for popular initiatives and referendums from A to Z, addressing the 10 topics outlined in the [guidelines](https://www.bk.admin.ch/bk/de/home/politische-rechte/e-collecting/aktuelles.html). Your prototype can be conceptual, clickable, and/or technical. Either way, you should clearly present the interactions and data flows between actors, software, and infrastructure components over time, as well as the user experience of these actors.*

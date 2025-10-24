@@ -29,9 +29,10 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 
 ## Team Members
 
-- Benjamin Meile/GitHub Account (role)
-- Name/GitHub Account (role)
-- Name/GitHub Account (role)
+- Benjamin Meile
+- Severin Graf 
+- *Fachexperten aus Bund, Kanton und Gemeinde*
+- *Fachexperten aus Kryptographie*
 - ...
 
 ## License

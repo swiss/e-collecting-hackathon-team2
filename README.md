@@ -30,7 +30,7 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 ## Team Members
 
 - [Benjamin Meile](https://github.com/benjaminmeile)
-- Severin Graf 
+- [Severin Graf](https://github.com/sevigraf) 
 - *Fachexperten aus Bund, Kanton und Gemeinde*
 - *Fachexperten aus Kryptographie*
 - ...

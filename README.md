@@ -13,6 +13,9 @@ Gibt es bereits entsprechende Standard-Definitionen (eCH) oder welche müssten e
 Wie können Geschäfte eindeutig identifiziert werden?
 
 
+<img width="2463" height="1394" alt="image" src="docs/e-Collecting.png" />
+
+
 ## Topics addressed
 
 | Topic | (How) is it addressed? |

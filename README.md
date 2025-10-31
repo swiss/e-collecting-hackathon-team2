@@ -34,9 +34,9 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 
 - [Benjamin Meile](https://github.com/benjaminmeile)
 - [Severin Graf](https://github.com/sevigraf) 
-- *Fachexperten aus Bund, Kanton und Gemeinde*
-- *Fachexperten aus Kryptographie*
-- ...
+- [Simon Graf](https://github.com/simgraworldwide)
+- Florian Wahl
+- Jorgo Ananiadis
 
 ## License
 

@@ -192,7 +192,6 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | F2 | Eine Sammelorganisation kann über ihren Login den aktuellen Stand der GUID's im E-Collecting-Tresor prüfen und so feststellen, wie gross ihr Anteil an den gültigen Unterschriten ist. |Sammelorganisation | 
 
 
-
 | Kommunikationsweg | Technologie | Standard |
 | -| ------- |-|
 | A1 | nicht definiert | nicht definiert|

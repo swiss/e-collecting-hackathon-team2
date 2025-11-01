@@ -36,6 +36,50 @@ Wie können Geschäfte eindeutig identifiziert werden?
 
 ## Teilprozesse
 
+## Bürger-Portal ##
+
+Das Bürger-Portal ist der Touchpoint des Bürgers in Bezug auf Volksbegehren und ist Teil einer übergeordneten n-Portal-Strategie. Dabei wird vorgesehen, dass mehrere Portale verschiedener Anbieter parallel existieren können.
+Ein einzelnes Portal muss nicht zwingend alle Funktionen abdecken (z. B. Sammel-Organisationen oder spezielle Erweiterungen).
+Verbindlich ist jedoch die Anbindung an die Sedex-Schnittstelle, um den Datenaustausch, Sicherheitsstandards und Anschlussfähigkeit zu gewährleisten. 
+Die Volksbegehren (VBGs) können periodisch, beispielsweise alle 24 Stunden, über die OGD-Schnittstelle importiert werden. Dadurch ist gewährleistet, dass ein Portale stets über die aktuellen Informationen zu laufenden und neuen Volksbegehren verfügt.
+
+*Funktionen für Bürgerinnen und Bürger*
+Das Portal ermöglicht Bürgerinnen und Bürgern die digitale Abgabe einer Willensbekundung im Rahmen eines Volksbegehrens.
+Die Kernfunktionen sind:
+- Interaktion mit einem Volksbegehren (VBG) bzw. politischen Geschäft über das Portal.
+- Identifikation des Bürgers, z. B. mittels eID oder einem vergleichbaren elektronischen Identifikationsverfahren.
+- Abgabe der Willensbekundung nach erfolgreicher Identifikation.
+- Bei der Abgabe wird eine GUID generiert und gespeichert, ohne Personenbezug (keine Zuordnung zum Bürger).
+- Nur die GUID und der Zeitstempel wird im Portal gespeichert
+- Informationen wie GUID, ID-Bürger, Zeitstempel, ID-Portal und optional ID-Sammelorganisation werden an die Gemeinde übermittelt.
+- Nach Abschluss der Willensbekundung wird dem Bürger eine Bestätigung angezeigt und die zugehörige GUID zur Verfügung gestellt (z. B. als Download oder zur Integration in ein digitales Wallet).
+- 
+*Ablauf einer Willensbekundung*
+1.	Auswahl des gewünschten Volksbegehrens.
+2.	Identifikation des Bürgers (z. B. über eID).
+3.	Bewusste Willensbekundung, optional mit zusätzlicher Verifikation (z. B. Video-Ident, 2FA).
+4.	Rückgabe der ecGUID als Bestätigung in unterschiedlicher Form (z. B. Bild, Verifiable Credential, E-Mail) mit dem Hinweis: „Lade deine Bestätigung herunter.“
+
+*Sammel-Organisationen*
+Eine Sammel-Organisationen registriert sich auf einem Portal und kann über diesen Zugang:
+- Sammelaktionen verwalten und
+- einen individuellen QR-Code generieren, der eine spätere Auswertung aller digital gesammelten Willensbekundungen dieser Organisation ermöglicht.
+
+*Übermittlung an die Gemeinde*
+Nach erfolgreicher Willensbekundung wird der entsprechende Datensatz über die Sedex-Schnittstelle an die zuständige Gemeinde übermittelt.
+Die Gemeinde bestätigt den technischen Empfang durch eine Sedex-Quittung, verarbeitet die Meldung jedoch asynchron.
+
+*Struktur der ecGUID*
+Die ecGUID dient als technische Kennung einer digitalen Willensbekundung und setzt sich wie folgt zusammen:
+[ID-Portal]_[ID-Sammlung]_[GUID]
+Definitionen:
+- ID-Plattform: Eindeutige Teilnehmer-ID der Plattform (z. B. Sedex-ID)
+- ID-Sammlung: Optionale Kennung zur Identifikation einer Sammel-Organisation
+- GUID: Systemgenerierte, eindeutige Kennung der Willensbekundung, ohne personenbezogene Informationen
+- Weitere Metadaten:
+  - Zeitstempel der Willensbekundung
+  - ID-VBG: Kennung des durch die Kanzlei eröffneten Volksbegehrens
+  - ID-Bürger: z. B. AHV-Nummer (zum Abgleich mit dem Stimmregister)
 
 ## Gemeinden / Stimmregister ##
 
@@ -44,14 +88,14 @@ Beim Eingang von Papierbekundungen kontrolliert die Gemeinde das Stimmrecht und 
 
 Digitale Willensbekundungen werden von x-beliebigen Bürgerportalen an die Gemeinden übermittelt. Die Übermittlung der Daten erfolgt mittels Sedex und im eCH-Format. Informationen zum Volksbegehren inklusive der Sammelfristen können bei Bedarf direkt über die Open-Government-Data-Plattform bezogen werden. 
 
-In der Meldung vom Portal sind die EC-GUID, die ID des Volksbegehrens sowie das Datum und die AHV-Nummer des Bürgers enthalten. Anhand der AHV-Nummer kann ein Bürger eindeutig identifiziert und auf stimmrecht geprüft werden. Ebenfalls kann die Gemeinde nun anhand der ID desVolksbegehrens automatisch eine Mehrfachunterschrift prüfen. 
+In der Meldung vom Portal sind die ecGUID, die ID des Volksbegehrens sowie das Datum und die AHV-Nummer des Bürgers enthalten. Anhand der AHV-Nummer kann eine Bürgerin oder ein Bürger eindeutig identifiziert und auf stimmrecht geprüft werden. Ebenfalls kann die Gemeinde nun anhand der ID desVolksbegehrens automatisch eine Mehrfachunterschrift prüfen. 
 
 Die Gemeinde kann die Willensbekundung nun automatisch oder halbautomatisch, mit Überprüfung durch einen Sachbearbeiter, in die Unterschriftenkontrolle eintragen und prüfen, ob diese Person stimmberechtigt ist und ob sie bereits eine Willensbekundung auf Papier oder digital eingereicht hat. 
 
-Nach der Bescheinigung einer gültigen Unterschrift wird die EC-GUID inklusive ID-Volksbegehren an den E-Collecting-Tresor weitergeleitet. (siehe eCH_XY) 
+Nach der Bescheinigung einer gültigen Unterschrift wird die ecGUID inklusive ID-Volksbegehren an den E-Collecting-Tresor weitergeleitet. (siehe eCH_XY) 
 
 ** P-GUID (optional)**
-Die P-GUID ist der Gegensatz zur EC-GUID. Pro gültigem Eintrag auf dem Unterschriftenbogen wird eine P-GUID direkt an den Tresor übermittelt. Damit wird den Komitee ermöglicht, ein gesamtübersicht aller gültigen Unterschriften auf einem Portal zu sehen. 
+Die P-GUID ist der Gegensatz zur ecGUID. Pro gültigem Eintrag auf dem Unterschriftenbogen wird eine P-GUID direkt an den Tresor übermittelt. Damit wird den Komitee ermöglicht, ein gesamtübersicht aller gültigen Unterschriften auf einem Portal zu sehen. 
 *Diese Erweiterung ist in unserem Prozess optional und dient nur den Komitee.*
 
 **Anforderungen:**
@@ -78,7 +122,7 @@ Da diese Informationen ohnehin öffentlich zugänglich sind (z. B. über das Amt
 Ein Grundbaustein unserer Lösungsidee ist der sogenannte E-Collecting-Tresor. In diesem Tresor wird pro Volksbegehren eine eigene Datenbank geführt. 
 In dieser Datenbank wird jede Willensbekundung gespeichert. 
 Eine Willensbekundung enthält folgende Daten: 
-- EC-GUID resp. P-GUID
+- ecGUID resp. pGUID
 - Datum der Einreichung
 
 In diesem Tresor werden alle Willensbekundungen gehalten. Dieser Tresor enthält jedoch keine Informationen zu Personendaten und enthält somit keine sensiblen Datensätze um zu einer Gesinnungsdatenbank zu werden.  

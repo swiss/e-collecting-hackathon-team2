@@ -161,6 +161,10 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | B2 | Das Bürgerportal übergibt die Willenbekundung an das zuständige Stimmregister der Gemeinde ||
 | B3 | Die Gemeinde prüft die Unterschrift/Stimmberechtigung (e-Collecting und Papier-Bogen) und speichert die Daten auf ihrem System. Der EC-GUID und der P-GUID werden dem e-Collecting-Tresor übergeben. |Gemeinde|
 | C1 | Das Komitee hat bei Initiativen laufend Zugriff auf den "eigenen" Tresor und kann den Fortschritt der Sammlung überprüfen. Zum Zeitpunkt X entscheidet das Komitee ob die Initiative abgegeben oder zurückgezogen wird. |Komitee | 
+| D1 | Die Kanzlei hat laufend Zugriff auf die eingereichten GUID von Referenden. Bei Initiativen entscheidet das Komitee, wann diese an die Kanzlei "übergeben" werden. Ab diesem Zeitpunkt hat das Komitee Zugriff auf die Daten und das Zustandekommen einer Initiative prüfen und bestätigen. |Kanzlei | 
+| F1 | Eine Sammelorganisation kann sich auf dem Bürgerportal für eine Initiative registrieren. |Sammelorganisation | 
+| F2 | Eine Sammelorganisation kann über ihren Login den aktuellen Stand der GUID's im E-Collecting-Tresor prüfen und so feststellen, wie gross ihr Anteil an den gültigen Unterschriten ist. |Sammelorganisation | 
+
 
 
 | Kommunikationsweg | Technologie | Standard |
@@ -172,6 +176,10 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | B1 | Web UI / Mobile App | nicht definiert |
 | B2 | Sedex Web-Service | eCH-Standard - zu definieren|
 | B3 | Sedex Web-Service | eCH-Standard - zu definieren|
+| C1 | Web UI / Mobile App | nicht definiert |
+| D1 | Web UI / Mobile App | nicht definiert |
+| F1 | Web UI / Mobile App | nicht definiert |
+| F1 | Sedex Web-Service | eCH-Standard - zu definieren|
 
 
 

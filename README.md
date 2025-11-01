@@ -23,7 +23,6 @@ Wie können Geschäfte eindeutig identifiziert werden?
 | 9 | *Erleichterte Einführung für Gemeinden mit Effizienzgewinn; auf der Grundlage von bestehender Infrastruktur und bestehenden Prozessen* </br> Die Gemeinden verfügen bereits über bewährte Fachsysteme zur Unterschriftenkontrolle. Diese sollen nicht durch neue Parallelstrukturen ersetzt, sondern für e-Collecting erweitert werden. So können bestehende Abläufe und Infrastrukturen weiter genutzt werden. Gemeinden profitieren von Effizienzgewinnen, weil Papier- und elektronische Unterschriften über das gleiche System geprüft werden. Das spart Ressourcen, schafft Vertrauen und ermöglicht eine schnelle Einführung von e-Collecting. |
 | 6 | *Verhinderung unterschlagener Unterstützungsbekundungen* </br> Über die zu definierende Schnittstelle zwischen E-Collecting-Portal und BK sowie kommunalem Fachsystem und BK sollen Prüfwerte zur Kontrolle ausgetauscht werden. |
 | 7 | *Wahrung des Stimmgeheimnisses* </br> Über die zu definierenden Schnittstellen zwischen allen Beteiligten (E-Collecting-Portal, Komitee, kommunalem Fachsystem und BK) sollen nur die notwendigen Daten und Informationen ausgetauscht werden. |
-| ... |  |
 
 # Lösungsmöglichkeit im dezentralen Ansatz
 
@@ -60,8 +59,40 @@ Ebenso kann die Konzeption der Open-Government-Data-Plattform (i14y) konkretisie
 Diese Schritte schaffen die technische und organisatorische Grundlage für die Einführung eines sicheren, föderal abgestützten E-Collecting-Systems, das die Digitalisierung der direkten Demokratie in der Schweiz pragmatisch, vertrauenswürdig und anschlussfähig vorantreibt.
 
 ## Gesamtübersicht
+Die Gesamtübersicht zeigt einen dezentralen und minimalinvasiven Ansatz auf. Nachfolgend wird der Prozess detailiert aufgezeigt.
+
+```mermaid
+---
+config:
+  theme: redux
+  layout: dagre
+---
+flowchart TB
+    C(["Bürger/innen"]) <--B1--> P(("n Bürger-Portale"))
+    P == "B2" ==> M(["Gemeinde"])
+    K(["Komitee"]) -- "C1" --> V
+    U(["Sammelorganisation"]) -- "F1"--> P
+    M == "B3" ==> V["E-Collecting-Tressor"]
+    P <-- "F2" --> V
+    V --"D1"--> Ch(["Kanzlei"])
+    Ch == "A2" ==> OGD["Open-Government-Data-Plattform"]
+    P -- "A3" --> OGD 
+    M -- "A4" --> OGD 
+    K -- "A1" --> Ch
+    OGD@{ shape: cyl}
+     P:::Pine
+     M:::Pine
+     U:::Pine
+     K:::Pine
+     V:::Sky
+     Ch:::Pine
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+    classDef Pine stroke-width:4px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
+    classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
+```
 
 ## Teilprozesse
+Nachfolged werden die einzelnen Teilprozesse und Akteure innerhalb dieses dezentralen Lösungsasatzes genauer definiert.
 
 ## Bürger-Portal ##
 
@@ -93,7 +124,7 @@ Eine Sammel-Organisationen registriert sich auf einem Portal und kann über dies
 - einen individuellen QR-Code generieren, der eine spätere Auswertung aller digital gesammelten Willensbekundungen dieser Organisation ermöglicht.
 
 *Übermittlung an die Gemeinde*
-Nach erfolgreicher Willensbekundung wird der entsprechende Datensatz über die Sedex-Schnittstelle an die zuständige Gemeinde übermittelt.
+Nach erfolgreicher Willensbekundung wird der entsprechende Datensatz über die Sedex-Schnittstelle an die zuständige Gemeinde übermittelt (siehe [eCH-02XY](docs/eCH-02XY-1-0.xsd)). </br>
 Die Gemeinde bestätigt den technischen Empfang durch eine Sedex-Quittung, verarbeitet die Meldung jedoch asynchron.
 
 *Struktur der ecGUID*
@@ -111,7 +142,7 @@ Definitionen:
 ## Gemeinden / Stimmregister ##
 
 Die Gemeinden sind für die Kontrolle der Unterschriften bzw. Willensbekundungen zuständig. Anhand der Einwohnerdaten kann die Gemeinde prüfen, ob eine Person stimmberechtigt ist. 
-Beim Eingang von Papierbekundungen kontrolliert die Gemeinde das Stimmrecht und generiert pro Eintrag eine P-GUID (siehe P-GUID). Die bescheinigten Unterschriftenbögen werden regelmäßig an die Komitees zurückgesendet. *Im Falle eines Referendums werden die Bögen direkt an die Kanzlei weitergeleitet. *
+Beim Eingang von Papierbekundungen kontrolliert die Gemeinde das Stimmrecht und generiert pro Eintrag eine P-GUID. Die bescheinigten Unterschriftenbögen werden regelmäßig an die Komitees zurückgesendet. *Im Falle eines Referendums werden die Bögen direkt an die Kanzlei weitergeleitet. *
 
 Digitale Willensbekundungen werden von x-beliebigen Bürgerportalen an die Gemeinden übermittelt. Die Übermittlung der Daten erfolgt mittels Sedex und im eCH-Format. Informationen zum Volksbegehren inklusive der Sammelfristen können bei Bedarf direkt über die Open-Government-Data-Plattform bezogen werden. 
 
@@ -119,7 +150,7 @@ In der Meldung vom Portal sind die ecGUID, die ID des Volksbegehrens sowie das D
 
 Die Gemeinde kann die Willensbekundung nun automatisch oder halbautomatisch, mit Überprüfung durch einen Sachbearbeiter, in die Unterschriftenkontrolle eintragen und prüfen, ob diese Person stimmberechtigt ist und ob sie bereits eine Willensbekundung auf Papier oder digital eingereicht hat. 
 
-Nach der Bescheinigung einer gültigen Unterschrift wird die ecGUID inklusive ID-Volksbegehren an den E-Collecting-Tresor weitergeleitet. (siehe eCH_XY) 
+Nach der Bescheinigung einer gültigen Unterschrift wird die ecGUID inklusive ID-Volksbegehren an den E-Collecting-Tresor weitergeleitet. (siehe [eCH-02XY](docs/eCH-02XY-1-0.xsd)) 
 
 ** P-GUID (optional)**
 Die P-GUID ist der Gegensatz zur ecGUID. Pro gültigem Eintrag auf dem Unterschriftenbogen wird eine P-GUID direkt an den Tresor übermittelt. Damit wird den Komitee ermöglicht, ein gesamtübersicht aller gültigen Unterschriften auf einem Portal zu sehen. 
@@ -144,7 +175,6 @@ Da diese Informationen ohnehin öffentlich zugänglich sind (z. B. über das Amt
 - Die schreibenden Endpunkte (Write-APIs) zur Erfassung oder Aktualisierung von VBG-Datensätzen – beispielsweise durch Kanzleien – sind nicht öffentlich, benötigen eine Authentifizierung und fallen somit nicht unter OGD.
 - Für den Datenaustausch wird das entsprechende eCH-Standardformat eCH-0252 implementiert, um die Interoperabilität mit anderen Verwaltungssystemen sicherzustellen.
 
-
 ### E-Collecting-Tresor ###
 Ein Grundbaustein unserer Lösungsidee ist der sogenannte E-Collecting-Tresor. In diesem Tresor wird pro Volksbegehren eine eigene Datenbank geführt. 
 In dieser Datenbank wird jede Willensbekundung gespeichert. 
@@ -166,7 +196,7 @@ Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. J
 
 ### Kanzlei (Bundeskanzlei, Kantons- resp. Staatskanzlei, Gemeindekanzlei)
 
-Ein Komitee möchte eine neue Initiative lancieren. Dazu wird diese Initiative bei der Kanzlei eingereicht. Je nachdem, ob die Initiative auf Bundes-, Kantons- oder Gemeindeebene eingereicht wurde, wird die entsprechende Kanzlei damit beauftragt, die Initiative zu prüfen. Wenn die Initiative bewilligt wird, wird sie im nächsten Schritt im Open-Government-Data-Portal veröffentlicht. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Initiativbezeichnung oder das Komitee. (*siehe Schema XY*)
+Ein Komitee möchte eine neue Initiative lancieren. Dazu wird diese Initiative bei der Kanzlei eingereicht. Je nachdem, ob die Initiative auf Bundes-, Kantons- oder Gemeindeebene eingereicht wurde, wird die entsprechende Kanzlei damit beauftragt, die Initiative zu prüfen. Wenn die Initiative bewilligt wird, wird sie im nächsten Schritt im Open-Government-Data-Portal veröffentlicht. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Initiativbezeichnung oder das Komitee.
 
 Pro Initiative erstellt die Kanzlei im E-Collecting-Tresor des Bundes ein Login für das Komitee. Dieses Login ermöglicht dem Komitee, auf die gesammelten Unterschriften zuzugreifen und diese bei Abschluss freizugeben, ähnlich wie bei Unterschriften auf Papier, die bei der Kanzlei eingereicht werden. Dieses Login wird auf Stufe Bund, Kanton oder Gemeinde erstellt.
 
@@ -175,6 +205,8 @@ Möchte das Initiativkomitee die Initiative zurückziehen, ist auch dies möglic
 Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschluss im Open-Government-Data-Portal veröffentlicht. Falls der Beschluss noch keine ID-Volksbegehung hat, wird diese bei der Veröffentlichung generiert. Auch bei einem Referendum werden Metadaten hinzugefügt, beispielsweise die Referendumsfrist oder die Bezeichnung des Beschlusses.
 
 ## Prozessablauf einer digitalen Willensbekundung
+
+<img width="1606" height="1102" alt="image" src="docs/Prozessübersicht.png" />
 
 ## Topics addressed
 
@@ -207,9 +239,6 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | F1 | Web UI / Mobile App | nicht definiert |
 | F2 | Sedex | eCH-Standard - zu definieren|
 
-
-<img width="1606" height="1102" alt="image" src="docs/Prozessübersicht.png" />
-
 ## Team Members
 
 - [Benjamin Meile](https://github.com/benjaminmeile)
@@ -218,36 +247,6 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 - Florian Wahl
 - Jorgo Ananiadis
 
-## Mermaid
-```mermaid
----
-config:
-  theme: redux
-  layout: dagre
----
-flowchart TB
-    C(["Bürger/innen"]) <--B1--> P(("n Bürger-Portale"))
-    P == "B2" ==> M(["Gemeinde"])
-    K(["Komitee"]) -- "C1" --> V
-    U(["Sammelorganisation"]) -- "F1"--> P
-    M == "B3" ==> V["E-Collecting-Tressor"]
-    P <-- "F2" --> V
-    V --"D1"--> Ch(["Kanzlei"])
-    Ch == "A2" ==> OGD["Open-Government-Data-Plattform"]
-    P -- "A3" --> OGD 
-    M -- "A4" --> OGD 
-    K -- "A1" --> Ch
-    OGD@{ shape: cyl}
-     P:::Pine
-     M:::Pine
-     U:::Pine
-     K:::Pine
-     V:::Sky
-     Ch:::Pine
-    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
-    classDef Pine stroke-width:4px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
-    classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
-```
 ## Contributing
 
 Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct.

@@ -250,8 +250,8 @@ Schemadefintion zu finden unter docs/[eCH-02XY](docs/eCH-02XY-1-0.xsd)
 - [Benjamin Meile](https://github.com/benjaminmeile)
 - [Severin Graf](https://github.com/sevigraf) 
 - [Simon Graf](https://github.com/simgraworldwide)
-- Florian Wahl
-- Jorgo Ananiadis
+- [Florian Wahl](https://github.com/iamflorianwahl)
+- [Jorgo Ananiadis](https://github.com/JorgoA)
 
 ## Contributing
 

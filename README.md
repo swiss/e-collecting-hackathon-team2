@@ -192,6 +192,37 @@ flowchart TB
     classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
 ```
 
+
+```mermaid
+---
+config:
+  theme: redux
+  layout: dagre
+---
+flowchart TB
+    C(["Bürger/innen"]) <--A1--> P(("n Bürger-Portale"))
+    P == "A2" ==> M(["Gemeinde"])
+    K(["Komitee"]) -- "C1" --> V
+    U(["Sammelorganisation"]) -- "F1"--> P
+    M == "A3" ==> V["E-Collecting-Tressor"]
+    P <-- "F2" --> V
+    V --"D1"--> Ch(["Kanzlei"])
+    Ch == "B2" ==> OGD["Open-Government-Data-Plattform"]
+    P -- "B3" --> OGD 
+    M -- "B4" --> OGD 
+    Ch --- K
+    OGD@{ shape: cyl}
+     P:::Pine
+     M:::Pine
+     U:::Pine
+     K:::Pine
+     V:::Sky
+     Ch:::Pine
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+    classDef Pine stroke-width:4px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
+    classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
+```
+
 ## License
 
 This software is licensed under a AGPL 3.0 License - see the [LICENSE](LICENSE) file for details. Please feel free to [choose any other](https://choosealicense.com/) [Open Source Initiative approved license](https://opensource.org/licenses) (e.g. a permissive license such as [MIT](https://opensource.org/license/mit)). Other content (e.g. text, images, etc.) is licensed under a [Creative Commons CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/deed.de). Exceptions are possible in consultation with the organizers.

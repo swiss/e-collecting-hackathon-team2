@@ -232,16 +232,16 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | A3 | REST API Get | eCH-Standard (eCH-0252)|
 | A4 | REST API Get | eCH-Standard (eCH-0252)|
 | B1 | Web UI / Mobile App | nicht definiert |
-| B2 | Sedex | eCH-Standard - zu definieren|
-| B3 | Sedex | eCH-Standard - zu definieren|
+| B2 | Sedex | eCH-Standard - [eCH-02XY](docs/eCH-02XY-1-0.xsd) |
+| B3 | Sedex | eCH-Standard - [eCH-02XY](docs/eCH-02XY-1-0.xsd)|
 | C1 | Web UI / Mobile App | nicht definiert |
 | D1 | Web UI / Mobile App | nicht definiert |
 | F1 | Web UI / Mobile App | nicht definiert |
-| F2 | Sedex | eCH-Standard - zu definieren|
+| F2 | Sedex | eCH-Standard - [eCH-02XY](docs/eCH-02XY-1-0.xsd)|
 
 ## Lieferobjekte ##
 
-Im Rahmen des Hackathon wurde eine Schnittstellendefinition erarbeitet, welche die offenen Schnittstellen aus dem Konzept beschreibt. 
+Im Rahmen des Hackathon wurde ein Schnittstellendefinitionsvorschlag erarbeitet, welche die offenen Schnittstellen aus dem Konzept beschreibt. 
 <img width="1606" height="1102" alt="image" src="docs/eCH-02XY.png" />
 Schemadefintion zu finden unter docs/[eCH-02XY](docs/eCH-02XY-1-0.xsd)
 

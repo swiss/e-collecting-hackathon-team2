@@ -149,6 +149,16 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 
 ## Prozessablauf einer digitalen Willensbekundung
 
+## Topics addressed
+
+| Topic | (How) is it addressed? |
+| -| ------- |
+| 8 | *Der Papierkanal wird während der Versuche weiterhin bestehen bleiben. Wie können beide Kanäle kombiniert und dabei Mehrfachunterschriften verhindert werden?* </br> Durch die Kombination und Verschmelzung von Papierkanal und e-Collecting auf der gleichen Datenbasis wird sichergestellt, dass Mehrfachunterschriften über unterschiedliche Kanäle verhindert werden. |
+| 9 | *Erleichterte Einführung für Gemeinden mit Effizienzgewinn; auf der Grundlage von bestehender Infrastruktur und bestehenden Prozessen* </br> Die Gemeinden verfügen bereits über bewährte Fachsysteme zur Unterschriftenkontrolle. Diese sollen nicht durch neue Parallelstrukturen ersetzt, sondern für e-Collecting erweitert werden. So können bestehende Abläufe und Infrastrukturen weiter genutzt werden. Gemeinden profitieren von Effizienzgewinnen, weil Papier- und elektronische Unterschriften über das gleiche System geprüft werden. Das spart Ressourcen, schafft Vertrauen und ermöglicht eine schnelle Einführung von e-Collecting. |
+| 6 | *Verhinderung unterschlagener Unterstützungsbekundungen* </br> Über die zu definierende Schnittstelle zwischen E-Collecting-Portal und BK sowie kommunalem Fachsystem und BK sollen Prüfwerte zur Kontrolle ausgetauscht werden. |
+| 7 | *Wahrung des Stimmgeheimnisses* </br> Über die zu definierenden Schnittstellen zwischen allen Beteiligten (E-Collecting-Portal, Komitee, kommunalem Fachsystem und BK) sollen nur die notwendigen Daten und Informationen ausgetauscht werden. |
+| ... |  |
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct.
@@ -200,17 +210,17 @@ config:
   layout: dagre
 ---
 flowchart TB
-    C(["Bürger/innen"]) <--A1--> P(("n Bürger-Portale"))
-    P == "A2" ==> M(["Gemeinde"])
+    C(["Bürger/innen"]) <--B1--> P(("n Bürger-Portale"))
+    P == "B2" ==> M(["Gemeinde"])
     K(["Komitee"]) -- "C1" --> V
     U(["Sammelorganisation"]) -- "F1"--> P
-    M == "A3" ==> V["E-Collecting-Tressor"]
+    M == "B3" ==> V["E-Collecting-Tressor"]
     P <-- "F2" --> V
     V --"D1"--> Ch(["Kanzlei"])
-    Ch == "B2" ==> OGD["Open-Government-Data-Plattform"]
-    P -- "B3" --> OGD 
-    M -- "B4" --> OGD 
-    Ch --- K
+    Ch == "A2" ==> OGD["Open-Government-Data-Plattform"]
+    P -- "A3" --> OGD 
+    M -- "A4" --> OGD 
+    K -- "A1" --> Ch
     OGD@{ shape: cyl}
      P:::Pine
      M:::Pine

@@ -30,7 +30,34 @@ Wie können Geschäfte eindeutig identifiziert werden?
 
 ## Managment-Summary ##
 
+Das Projekt E-Collecting vom bestehenden Stimmregister aus gedacht verfolgt das Ziel, die bestehenden kommunalen Fachsysteme zur Unterschriftenkontrolle um digitale Kanäle zu erweitern und so die Grundlage für ein schweizweit einheitliches, sicheres und effizientes E-Collecting-Verfahren zu schaffen. Im Zentrum steht die Weiterverwendung bewährter kommunaler Infrastrukturen und Prozesse, kombiniert mit klar definierten Schnittstellen zu neuen digitalen Komponenten wie Bürgerportalen, E-Collecting-Tresoren und den Open-Government-Data-(OGD)-Plattformen.
 
+**Ausgangslage**
+
+Städte und Gemeinden sind heute für die Prüfung von Unterschriften sämtlicher Volksbegehren auf allen föderalen Ebenen verantwortlich. Diese Aufgabe erfolgt bisher mit etablierten Fachsystemen, die grosses Vertrauen geniessen und schweizweit im Einsatz sind. Dieses bewährte Fundament soll gezielt genutzt und um digitale Komponenten erweitert werden. 
+
+**Zielsetzung**
+
+Das Projekt zeigt auf, wie E-Collecting technisch und organisatorisch in die bestehenden kommunalen Abläufe integriert werden kann. Dabei liegt der Fokus nicht auf der vollständigen Systementwicklung, sondern auf der Klärung der Voraussetzungen für eine interoperable, föderal abgestützte Lösung.
+Am Hackathon fokusieren wir uns auf die Identifikation und Definition der Schnittstellen zwischen den einzelnen Akteuren. 
+Welche Schnittstellen und Meldeflüsse mit welchen Daten sind erforderlich? Gibt es bereits passende eCH-Standarddefinitionen oder müssen neue geschaffen werden und wie können Volksbegehren bzw. Geschäfte eindeutig identifiziert werden.
+
+**Lösungsansatz**
+
+Das Konzept sieht einen dezentralen Ansatz vor, bei dem Bürgerportale als Frontend für die digitale Willensbekundung fungieren. Nach der Identifikation (z. B. via eID) wird die digitale Unterschrift in Form einer anonymisierten EC-GUID erzeugt und über die Sedex-Schnittstelle an die zuständige Gemeinde übermittelt. Diese prüft die Stimmberechtigung auf Basis des kommunalen Stimmregisters und bescheinigt die Willensbekundung – analog zu den heutigen Papierprozessen. Alle gültigen Datensätze werden im E-Collecting-Tresor abgelegt, der als zentrale, aber datenschutzkonforme Sammelstelle dient.
+Parallel werden Volksbegehren und Metadaten über die Open-Government-Data-Plattform (i14y) bereitgestellt, um Transparenz und Nachvollziehbarkeit sicherzustellen.
+
+**Vorteile**
+
+Vertrauenswürdigkeit: Die Gemeinden bleiben zentrale Prüfstellen und behalten die Datenhoheit.
+Skalierbarkeit: Das Modell funktioniert föderal über alle Ebenen hinweg.
+Datenschutz: Es erfolgt keine Speicherung personenbezogener Daten ausserhalb des Gemeinde Fachsystems. 
+Nachvollziehbarkeit: Einheitliche Identifikatoren (EC-GUID/P-GUID) und standardisierte Schnittstellen sichern Konsistenz und Prüfbarkeit.
+
+**Nächste Schritte**
+
+Im Rahmen des Hackathons werden die relevanten Schnittstellen und Meldeflüsse identifiziert und spezifiziert. Dabei steht im Fokus, welche Daten ausgetauscht werden, wie diese strukturiert sind (nach eCH-Standards) und wie politische Geschäfte eindeutig identifiziert werden können.
+Das Projekt schafft somit die technische und organisatorische Grundlage für die Einführung eines sicheren, föderal abgestützten E-Collecting-Systems, das die Digitalisierung der direkten Demokratie in der Schweiz pragmatisch, vertrauenswürdig und anschlussfähig vorantreibt.
 
 ## Gesamtübersicht
 

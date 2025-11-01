@@ -26,7 +26,10 @@ Wie können Geschäfte eindeutig identifiziert werden?
 | 7 | *Wahrung des Stimmgeheimnisses* </br> Über die zu definierenden Schnittstellen zwischen allen Beteiligten (E-Collecting-Portal, Komitee, kommunalem Fachsystem und BK) sollen nur die notwendigen Daten und Informationen ausgetauscht werden. |
 | ... |  |
 
-# Lösungsmöglichkeit
+# Lösungsmöglichkeit im dezentralen Ansatz
+
+## Managment-Summary ##
+
 
 
 ## Gesamtübersicht
@@ -39,7 +42,7 @@ Wie können Geschäfte eindeutig identifiziert werden?
 Die Gemeinden sind für die Kontrolle der Unterschriften bzw. Willensbekundungen zuständig. Anhand der Einwohnerdaten kann die Gemeinde prüfen, ob eine Person stimmberechtigt ist. 
 Beim Eingang von Papierbekundungen kontrolliert die Gemeinde das Stimmrecht und generiert pro Eintrag eine P-GUID (siehe P-GUID). Die bescheinigten Unterschriftenbögen werden regelmäßig an die Komitees zurückgesendet. *Im Falle eines Referendums werden die Bögen direkt an die Kanzlei weitergeleitet. *
 
-Digitale Willensbekundungen werden von x-beliebigen Bürgerportalen an die Gemeinden übermittelt. Die Übermittlung der Daten erfolgt mittels Sedex und im eCH-Format. Informationen zum Volksbegehren inklusive der Sammelfristen können direkt über die Open-Government-Data-Plattform bezogen werden. 
+Digitale Willensbekundungen werden von x-beliebigen Bürgerportalen an die Gemeinden übermittelt. Die Übermittlung der Daten erfolgt mittels Sedex und im eCH-Format. Informationen zum Volksbegehren inklusive der Sammelfristen können bei Bedarf direkt über die Open-Government-Data-Plattform bezogen werden. 
 
 In der Meldung vom Portal sind die EC-GUID, die ID des Volksbegehrens sowie das Datum und die AHV-Nummer des Bürgers enthalten. Anhand der AHV-Nummer kann ein Bürger eindeutig identifiziert und auf stimmrecht geprüft werden. Ebenfalls kann die Gemeinde nun anhand der ID desVolksbegehrens automatisch eine Mehrfachunterschrift prüfen. 
 

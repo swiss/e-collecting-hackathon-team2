@@ -186,7 +186,7 @@ In diesem Tresor werden alle Willensbekundungen gehalten. Dieser Tresor enthält
 
 Die Datenbank ist unterteilt in einen geschlossene und einen freigegebene Datenbereich. Die Kanzlei hat Einsicht in den freigebenen Datenbereich und kann die Willensbekundungen nach Ablauf und Einreichung der Sammelfrist ansehen und prüfen. 
 
-Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. Jede Sammel-Organisation kann via Bürger-Potral prüfen, wie viele Willensbekundungen durch den gesamten Unterschrift durch sie gesammelt wurden. Dazu kann das Portal die Sammelorganisation-ID an den Tresor senden und dieser antwortet, ob die Willensbekundung vorhanden ist oder nicht. Falls diese nicht vorhanden ist, kann es sein, dass die Gemeinde die Willensbekundung noch nicht vollständig geprüft und verarbeitet hat. 
+Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. Jede Sammel-Organisation kann via Bürger-Potral prüfen, wie viele Willensbekundungen durch den gesamten Unterschrift durch sie gesammelt wurden. Dazu kann das Portal die Sammelorganisation-ID an den Tresor senden und dieser antwortet, ob die Willensbekundung vorhanden ist oder nicht. Falls diese nicht vorhanden ist, kann es sein, dass die Gemeinde die Willensbekundung noch nicht vollständig geprüft und verarbeitet hat, oder aber, dass die Person nicht stimmberechtigt war (aufgrund fehlender Voraussetzungen oder aufgrund bereits erfolgter Unterschrift auf elektronischem oder herkömmlichem Weg). 
 
 **Anforderungen:**
 - Login für Kanzlei und Zugriffssteuerung auf jeweilige Volksbegehren auf Stufe Bund, Kanton oder Gemeinde
@@ -196,7 +196,7 @@ Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. J
 
 ### Kanzlei (Bundeskanzlei, Kantons- resp. Staatskanzlei, Gemeindekanzlei)
 
-Ein Komitee möchte eine neue Initiative lancieren. Dazu wird diese Initiative bei der Kanzlei eingereicht. Je nachdem, ob die Initiative auf Bundes-, Kantons- oder Gemeindeebene eingereicht wurde, wird die entsprechende Kanzlei damit beauftragt, die Initiative zu prüfen. Wenn die Initiative bewilligt wird, wird sie im nächsten Schritt im Open-Government-Data-Portal veröffentlicht. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Initiativbezeichnung oder das Komitee.
+Ein Komitee möchte eine neue Initiative lancieren. Dazu wird diese Initiative bei der Kanzlei eingereicht. Je nachdem, ob die Initiative auf Bundes-, Kantons- oder Gemeindeebene eingereicht wurde, wird die entsprechende Kanzlei damit beauftragt, die Initiative zu prüfen. Wenn die Initiative bewilligt wird, wird sie im nächsten Schritt im entsprechenden Publikationsorgan (Bundesblatt, Amtsblatt etc.) und zusätzlich im Open-Government-Data-Portal veröffentlicht. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Initiativbezeichnung oder das Komitee.
 
 Pro Initiative erstellt die Kanzlei im E-Collecting-Tresor des Bundes ein Login für das Komitee. Dieses Login ermöglicht dem Komitee, auf die gesammelten Unterschriften zuzugreifen und diese bei Abschluss freizugeben, ähnlich wie bei Unterschriften auf Papier, die bei der Kanzlei eingereicht werden. Dieses Login wird auf Stufe Bund, Kanton oder Gemeinde erstellt.
 

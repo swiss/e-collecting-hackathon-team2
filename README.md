@@ -15,7 +15,6 @@ Wie können Geschäfte eindeutig identifiziert werden?
 
 <img width="2463" height="1394" alt="image" src="docs/e-Collecting.png" />
 
-
 ## Topics addressed
 
 | Topic | (How) is it addressed? |
@@ -209,11 +208,7 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | F2 | Sedex | eCH-Standard - zu definieren|
 
 
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct.
+<img width="1606" height="1102" alt="image" src="docs/Prozessübersicht.png" />
 
 ## Team Members
 
@@ -253,6 +248,9 @@ flowchart TB
     classDef Pine stroke-width:4px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
     classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
 ```
+## Contributing
+
+Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct.
 
 ## License
 

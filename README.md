@@ -115,7 +115,7 @@ Da diese Informationen ohnehin öffentlich zugänglich sind (z. B. über das Amt
 **Anforderungen:**
 - Die lesenden Endpunkte (Read-APIs) sind öffentlich zugänglich und werden auf der i14y-Plattform gelistet.
 - Die schreibenden Endpunkte (Write-APIs) zur Erfassung oder Aktualisierung von VBG-Datensätzen – beispielsweise durch Kanzleien – sind nicht öffentlich, benötigen eine Authentifizierung und fallen somit nicht unter OGD.
-- Für den Datenaustausch wird das entsprechende eCH-Standardformat eCH-XY implementiert, um die Interoperabilität mit anderen Verwaltungssystemen sicherzustellen.
+- Für den Datenaustausch wird das entsprechende eCH-Standardformat eCH-0252 implementiert, um die Interoperabilität mit anderen Verwaltungssystemen sicherzustellen.
 
 
 ### E-Collecting-Tresor ###
@@ -151,13 +151,29 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 
 ## Topics addressed
 
-| Topic | (How) is it addressed? |
-| -| ------- |
-| 8 | *Der Papierkanal wird während der Versuche weiterhin bestehen bleiben. Wie können beide Kanäle kombiniert und dabei Mehrfachunterschriften verhindert werden?* </br> Durch die Kombination und Verschmelzung von Papierkanal und e-Collecting auf der gleichen Datenbasis wird sichergestellt, dass Mehrfachunterschriften über unterschiedliche Kanäle verhindert werden. |
-| 9 | *Erleichterte Einführung für Gemeinden mit Effizienzgewinn; auf der Grundlage von bestehender Infrastruktur und bestehenden Prozessen* </br> Die Gemeinden verfügen bereits über bewährte Fachsysteme zur Unterschriftenkontrolle. Diese sollen nicht durch neue Parallelstrukturen ersetzt, sondern für e-Collecting erweitert werden. So können bestehende Abläufe und Infrastrukturen weiter genutzt werden. Gemeinden profitieren von Effizienzgewinnen, weil Papier- und elektronische Unterschriften über das gleiche System geprüft werden. Das spart Ressourcen, schafft Vertrauen und ermöglicht eine schnelle Einführung von e-Collecting. |
-| 6 | *Verhinderung unterschlagener Unterstützungsbekundungen* </br> Über die zu definierende Schnittstelle zwischen E-Collecting-Portal und BK sowie kommunalem Fachsystem und BK sollen Prüfwerte zur Kontrolle ausgetauscht werden. |
-| 7 | *Wahrung des Stimmgeheimnisses* </br> Über die zu definierenden Schnittstellen zwischen allen Beteiligten (E-Collecting-Portal, Komitee, kommunalem Fachsystem und BK) sollen nur die notwendigen Daten und Informationen ausgetauscht werden. |
-| ... |  |
+| Prozess-Schritt | Beschreibung | Akteur |
+| -| ------- |-|
+| A1 | Komitee startet eine Volksinitiative und gibt diese bei der Kanzlei ein. Der Prozess von Eingabe, Prüfung, Rückfragen etc ist nicht Teil unseres Konzepts und kann nach Bedarf definiert werden | Komitee und Kanzlei|
+| A2 | Die Kanzlei veröffentlicht die Initiative oder das Referendum auf der Open-Government-Data-Portal. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Bezeichnung oder das Komitee. |Kanzlei|
+| A3 | Bürgerportale beziehen neue Volksbegehren laufend von der Open-Government-Data-Plattform und speichern die jeweilige **ID-Volksbegehren** |Kanzlei|
+| A4 | Gemeinde Stimmregister beziehen bei Bedarf (Eingang eines entsprechenden Volksbegehren die Daten von der Open-Government-Data-Plattform und speichern die jeweilige **ID-Volksbegehren** |Gemeinde|
+| B1 | Der Bürger entscheidet sich für die Willensbekundung eines Volkbegehrens. Auf dem Bürgerportal indentifiziert er sich und gibt die Willensbekundung ab. Das Bürgerportal generiert einen GUID. |Bürger|
+| B2 | Das Bürgerportal übergibt die Willenbekundung an das zuständige Stimmregister der Gemeinde ||
+| B3 | Die Gemeinde prüft die Unterschrift/Stimmberechtigung (e-Collecting und Papier-Bogen) und speichert die Daten auf ihrem System. Der EC-GUID und der P-GUID werden dem e-Collecting-Tresor übergeben. |Gemeinde|
+| C1 | Das Komitee hat bei Initiativen laufend Zugriff auf den "eigenen" Tresor und kann den Fortschritt der Sammlung überprüfen. Zum Zeitpunkt X entscheidet das Komitee ob die Initiative abgegeben oder zurückgezogen wird. |Komitee | 
+
+
+| Kommunikationsweg | Technologie | Standard |
+| -| ------- |-|
+| A1 | nicht definiert | nicht definiert|
+| A2 | REST API Post | eCH-Standard (eCH-0252)|
+| A3 | REST API Get | eCH-Standard (eCH-0252)|
+| A4 | REST API Get | eCH-Standard (eCH-0252)|
+| B1 | Web UI / Mobile App | nicht definiert |
+| B2 | Sedex Web-Service | eCH-Standard - zu definieren|
+| B3 | Sedex Web-Service | eCH-Standard - zu definieren|
+
+
 
 ## Contributing
 

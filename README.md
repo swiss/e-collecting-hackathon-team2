@@ -159,7 +159,7 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | A4 | Gemeinde Stimmregister beziehen bei Bedarf (Eingang eines entsprechenden Volksbegehren die Daten von der Open-Government-Data-Plattform und speichern die jeweilige **ID-Volksbegehren** |Gemeinde|
 | B1 | Der Bürger entscheidet sich für die Willensbekundung eines Volkbegehrens. Auf dem Bürgerportal indentifiziert er sich und gibt die Willensbekundung ab. Das Bürgerportal generiert einen GUID. |Bürger|
 | B2 | Das Bürgerportal übergibt die Willenbekundung an das zuständige Stimmregister der Gemeinde ||
-| B3 | Die Gemeinde prüft die Unterschrift/Stimmberechtigung (e-Collecting und Papier-Bogen) und speichert die Daten auf ihrem System. Der EC-GUID und der P-GUID werden dem e-Collecting-Tresor übergeben. |Gemeinde|
+| B3 | Die Gemeinde prüft die Unterschrift/Stimmberechtigung (e-Collecting und Papier-Bogen) und speichert die Daten auf ihrem System. Der EC-GUID und der P-GUID werden dem e-Collecting-Tresor übergeben. 
 | C1 | Das Komitee hat bei Initiativen laufend Zugriff auf den "eigenen" Tresor und kann den Fortschritt der Sammlung überprüfen. Zum Zeitpunkt X entscheidet das Komitee ob die Initiative abgegeben oder zurückgezogen wird. |Komitee | 
 | D1 | Die Kanzlei hat laufend Zugriff auf die eingereichten GUID von Referenden. Bei Initiativen entscheidet das Komitee, wann diese an die Kanzlei "übergeben" werden. Ab diesem Zeitpunkt hat das Komitee Zugriff auf die Daten und das Zustandekommen einer Initiative prüfen und bestätigen. |Kanzlei | 
 | F1 | Eine Sammelorganisation kann sich auf dem Bürgerportal für eine Initiative registrieren. |Sammelorganisation | 

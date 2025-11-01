@@ -239,6 +239,12 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | F1 | Web UI / Mobile App | nicht definiert |
 | F2 | Sedex | eCH-Standard - zu definieren|
 
+## Lieferobjekte ##
+
+Im Rahmen des Hackathon wurde eine Schnittstellendefinition erarbeitet, welche die offenen Schnittstellen aus dem Konzept beschreibt. 
+<img width="1606" height="1102" alt="image" src="docs/eCH-02XY.png" />
+Schemadefintion zu finden unter docs/[eCH-02XY](docs/eCH-02XY-1-0.xsd)
+
 ## Team Members
 
 - [Benjamin Meile](https://github.com/benjaminmeile)

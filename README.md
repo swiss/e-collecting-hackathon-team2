@@ -174,12 +174,12 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | A3 | REST API Get | eCH-Standard (eCH-0252)|
 | A4 | REST API Get | eCH-Standard (eCH-0252)|
 | B1 | Web UI / Mobile App | nicht definiert |
-| B2 | Sedex Web-Service | eCH-Standard - zu definieren|
-| B3 | Sedex Web-Service | eCH-Standard - zu definieren|
+| B2 | Sedex | eCH-Standard - zu definieren|
+| B3 | Sedex | eCH-Standard - zu definieren|
 | C1 | Web UI / Mobile App | nicht definiert |
 | D1 | Web UI / Mobile App | nicht definiert |
 | F1 | Web UI / Mobile App | nicht definiert |
-| F1 | Sedex Web-Service | eCH-Standard - zu definieren|
+| F1 | Sedex | eCH-Standard - zu definieren|
 
 
 

@@ -183,6 +183,7 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 
 
 
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct.

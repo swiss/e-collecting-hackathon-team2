@@ -167,7 +167,7 @@ Für die Veröffentlichung ist vorgesehen, einen VBG-Datensatz (Volksbegehren/Ge
 - ID-VBG (eindeutige Kennung des politischen Geschäfts)
 - Komitee (Name des Komitees)
 - Titel
-- Beschreibung (Kurzbeschreibung der Initiative)
+- Beschreibung (Kurzbeschreibung des Volksbegehrens)
 - Sammelfristen (relevante Fristen)
 Da diese Informationen ohnehin öffentlich zugänglich sind (z. B. über das Amtsblatt oder andere Publikationskanäle) und im Rahmen des Gesamtkonzepts mehreren Systemen zur Verfügung gestellt werden müssen, bietet sich die Publikation im Rahmen von Open Government Data (OGD) ausdrücklich an.
 **Anforderungen:**

@@ -179,7 +179,7 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 | C1 | Web UI / Mobile App | nicht definiert |
 | D1 | Web UI / Mobile App | nicht definiert |
 | F1 | Web UI / Mobile App | nicht definiert |
-| F1 | Sedex | eCH-Standard - zu definieren|
+| F2 | Sedex | eCH-Standard - zu definieren|
 
 
 

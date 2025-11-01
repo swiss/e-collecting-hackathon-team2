@@ -54,7 +54,7 @@ Datenschutz: Es erfolgt keine Speicherung personenbezogener Daten ausserhalb des
 Nachvollziehbarkeit: Einheitliche Identifikatoren (EC-GUID/P-GUID) und standardisierte Schnittstellen sichern Konsistenz und Prüfbarkeit.
 
 **Nächste Schritte**
-Im Rahmen des Hackathons werden die relevanten Schnittstellen und Meldeflüsse identifiziert und spezifiziert. Dabei steht im Fokus, welche Daten ausgetauscht werden, wie diese strukturiert sind (nach eCH-Standards) und wie politische Geschäfte eindeutig identifiziert werden können.
+
 Die gewonnenen Erkenntnisse sollen mit bestehenden Lösungsideen von Bürgerportalen kombiniert werden, um ein durchgängiges, interoperables Gesamtkonzept zu skizzieren. Parallel dazu könnte die Finalisierung bzw. Erweiterung der nötigen eCH-Standards vorangetrieben werden, um eine technische Grundlage für die Kommunikation zwischen den Systemen zu schaffen.
 Ebenso kann die Konzeption der Open-Government-Data-Plattform (i14y) konkretisiert werden, damit Volksbegehren und Metadaten künftig standardisiert publiziert und von allen beteiligten Systemen automatisiert bezogen werden können.
 Diese Schritte schaffen die technische und organisatorische Grundlage für die Einführung eines sicheren, föderal abgestützten E-Collecting-Systems, das die Digitalisierung der direkten Demokratie in der Schweiz pragmatisch, vertrauenswürdig und anschlussfähig vorantreibt.

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0252="http://www.ech.ch/xmlns/eCH-0252/1" xmlns:eCH-0058="http://www.ech.ch/xmlns/eCH-0058/5" xmlns:eCH-0155="http://www.ech.ch/xmlns/eCH-0155/5" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-02XY="http://www.ech.ch/xmlns/eCH-2XY/1" targetNamespace="http://www.ech.ch/xmlns/eCH-2XY/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Ausgabedatum: 23.08.2022</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0058/5" schemaLocation="http://www.ech.ch/xmlns/eCH-0058/5/eCH-0058-5-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0155/5" schemaLocation="http://www.ech.ch/xmlns/eCH-0155/5/eCH-0155-5-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0044/4" schemaLocation="http://www.ech.ch/xmlns/eCH-0044/4/eCH-0044-4-1.xsd"/>
+	<xs:attribute name="minorVersion" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>This attribute is used for indicating the minor version of an XML Schema instance in a standardized way. It SHOULD only appear on the document element of XML Schema instances.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:simpleType name="countOfType">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="9999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="groupingType">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sequenceType">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="idNameType">
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="20"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="resultNameType">
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="100"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="delivery">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="deliveryHeader" type="eCH-0058:headerType"/>
+				<xs:choice>
+					<xs:element name="declarationOfIntent">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Voter">
+									<xs:complexType>
+										<xs:choice>
+											<xs:element name="vn"/>
+											<xs:element ref="eCH-0044:personIdentificationRoot"/>
+										</xs:choice>
+									</xs:complexType>
+								</xs:element>
+								<xs:sequence>
+									<xs:element name="ecGUID">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:sequence>
+													<xs:element name="GUID"/>
+													<xs:element name="PlattformIdentification"/>
+													<xs:element name="CollectOrganisationIdentification"/>
+												</xs:sequence>
+												<xs:element name="ecGUID"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Timestamp"/>
+									<xs:element name="voteIdentification" type="eCH-0155:voteIdentificationType"/>
+								</xs:sequence>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="certificationOfIntent">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="voteIdentification" type="eCH-0155:voteIdentificationType"/>
+								<xs:element name="certification" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:choice>
+												<xs:element name="ecGUID"/>
+												<xs:element name="pGUID"/>
+											</xs:choice>
+											<xs:element name="TimeStamp"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="countCollectOrganisation">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="voteIdentification" type="eCH-0155:voteIdentificationType"/>
+								<xs:sequence>
+									<xs:element name="PlattformIdentification"/>
+									<xs:element name="CollectOrganisationIdentification"/>
+								</xs:sequence>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="numberOfIntent">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ecGUID">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:sequence>
+												<xs:element name="GUID"/>
+												<xs:element name="PlattformIdentification"/>
+												<xs:element name="CollectOrganisationIdentification"/>
+											</xs:sequence>
+											<xs:element name="ecGUID"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Timestamp"/>
+								<xs:element name="voteIdentification" type="eCH-0155:voteIdentificationType"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

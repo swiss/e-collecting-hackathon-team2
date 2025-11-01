@@ -72,7 +72,7 @@ flowchart TB
     P == "B2" ==> M(["Gemeinde"])
     K(["Komitee"]) -- "C1" --> V
     U(["Sammelorganisation"]) -- "F1"--> P
-    M == "B3" ==> V["E-Collecting-Tressor"]
+    M == "B3" ==> V["E-Collecting-Tresor"]
     P <-- "F2" --> V
     V --"D1"--> Ch(["Kanzlei"])
     Ch == "A2" ==> OGD["Open-Government-Data-Plattform"]
@@ -99,7 +99,7 @@ Nachfolged werden die einzelnen Teilprozesse und Akteure innerhalb dieses dezent
 Das Bürger-Portal ist der Touchpoint des Bürgers in Bezug auf Volksbegehren und ist Teil einer übergeordneten n-Portal-Strategie. Dabei wird vorgesehen, dass mehrere Portale verschiedener Anbieter parallel existieren können.
 Ein einzelnes Portal muss nicht zwingend alle Funktionen abdecken (z. B. Sammel-Organisationen oder spezielle Erweiterungen).
 Verbindlich ist jedoch die Anbindung an die Sedex-Schnittstelle, um den Datenaustausch, Sicherheitsstandards und Anschlussfähigkeit zu gewährleisten. 
-Die Volksbegehren (VBGs) können periodisch, beispielsweise alle 24 Stunden, über die OGD-Schnittstelle importiert werden. Dadurch ist gewährleistet, dass ein Portale stets über die aktuellen Informationen zu laufenden und neuen Volksbegehren verfügt.
+Die Volksbegehren (VBGs) können periodisch, beispielsweise alle 24 Stunden, über die OGD-Schnittstelle importiert werden. Dadurch ist gewährleistet, dass jedes Portal stets über die aktuellen Informationen zu laufenden und neuen Volksbegehren verfügt.
 
 *Funktionen für Bürgerinnen und Bürger*
 Das Portal ermöglicht Bürgerinnen und Bürgern die digitale Abgabe einer Willensbekundung im Rahmen eines Volksbegehrens.
@@ -108,7 +108,7 @@ Die Kernfunktionen sind:
 - Identifikation des Bürgers, z. B. mittels eID oder einem vergleichbaren elektronischen Identifikationsverfahren.
 - Abgabe der Willensbekundung nach erfolgreicher Identifikation.
 - Bei der Abgabe wird eine GUID generiert und gespeichert, ohne Personenbezug (keine Zuordnung zum Bürger).
-- Nur die GUID und der Zeitstempel wird im Portal gespeichert
+- Nur die GUID und der Zeitstempel werden im Portal gespeichert
 - Informationen wie GUID, ID-Bürger, Zeitstempel, ID-Portal und optional ID-Sammelorganisation werden an die Gemeinde übermittelt.
 - Nach Abschluss der Willensbekundung wird dem Bürger eine Bestätigung angezeigt und die zugehörige GUID zur Verfügung gestellt (z. B. als Download oder zur Integration in ein digitales Wallet).
 - 

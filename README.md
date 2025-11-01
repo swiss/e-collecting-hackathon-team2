@@ -33,6 +33,27 @@ Wie können Geschäfte eindeutig identifiziert werden?
 
 ## Teilprozesse
 
+
+## Gemeinden / Stimmregister ##
+
+Die Gemeinden sind für die Kontrolle der Unterschriften bzw. Willensbekundungen zuständig. Anhand der Einwohnerdaten kann die Gemeinde prüfen, ob eine Person stimmberechtigt ist. 
+Beim Eingang von Papierbekundungen kontrolliert die Gemeinde das Stimmrecht und generiert pro Eintrag eine P-GUID (siehe P-GUID). Die bescheinigten Unterschriftenbögen werden regelmäßig an die Komitees zurückgesendet. *Im Falle eines Referendums werden die Bögen direkt an die Kanzlei weitergeleitet. *
+
+Digitale Willensbekundungen werden von x-beliebigen Bürgerportalen an die Gemeinden übermittelt. Die Übermittlung der Daten erfolgt mittels Sedex und im eCH-Format. Informationen zum Volksbegehren inklusive der Sammelfristen können direkt über die Open-Government-Data-Plattform bezogen werden. 
+
+In der Meldung vom Portal sind die EC-GUID, die ID des Volksbegehrens sowie das Datum und die AHV-Nummer des Bürgers enthalten. Anhand der AHV-Nummer kann ein Bürger eindeutig identifiziert und auf stimmrecht geprüft werden. Ebenfalls kann die Gemeinde nun anhand der ID desVolksbegehrens automatisch eine Mehrfachunterschrift prüfen. 
+
+Die Gemeinde kann die Willensbekundung nun automatisch oder halbautomatisch, mit Überprüfung durch einen Sachbearbeiter, in die Unterschriftenkontrolle eintragen und prüfen, ob diese Person stimmberechtigt ist und ob sie bereits eine Willensbekundung auf Papier oder digital eingereicht hat. 
+
+Nach der Bescheinigung einer gültigen Unterschrift wird die EC-GUID inklusive ID-Volksbegehren an den E-Collecting-Tresor weitergeleitet. (siehe eCH_XY) 
+
+** P-GUID (optional)**
+Die P-GUID ist der Gegensatz zur EC-GUID. Pro gültigem Eintrag auf dem Unterschriftenbogen wird eine P-GUID direkt an den Tresor übermittelt. Damit wird den Komitee ermöglicht, ein gesamtübersicht aller gültigen Unterschriften auf einem Portal zu sehen. 
+*Diese Erweiterung ist in unserem Prozess optional und dient nur den Komitee.*
+
+**Anforderungen:**
+- Unterstützung der neuen Schnittstellenstandards zum Empfang und Versand der Willensbekundung
+
 ### Open-Government-Data-Plattform ###
 Im Rahmen der Bereitstellung von Volksbegehren soll die Publikation der Schnittstellen über die i14y-Plattform des Bundes (https://www.i14y.admin.ch/de/home) erfolgen.
 Die Plattform i14y bietet sich insbesondere an, da sie für alle föderalen Ebenen – Bund, Kantone und Gemeinden – konzipiert und nutzbar ist und somit eine zentrale, standardisierte Anlaufstelle für offene Schnittstellen darstellt.
@@ -61,7 +82,7 @@ In diesem Tresor werden alle Willensbekundungen gehalten. Dieser Tresor enthält
 
 Die Datenbank ist unterteilt in einen geschlossene und einen freigegebene Datenbereich. Die Kanzlei hat Einsicht in den freigebenen Datenbereich und kann die Willensbekundungen nach Ablauf und Einreichung der Sammelfrist ansehen und prüfen. 
 
-Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. Jede Sammel-Organisation kann via Plattform prüfen, wie viele Willensbekundungen durch den gesamten Unterschrift durch sie gesammelt wurden. Dazu kann die Plattform die Sammelorganisation an den Tresor senden und dieser antwortet, ob die Willensbekundung vorhanden ist oder nicht. Falls diese nicht vorhanden ist, kann es sein, dass die Gemeinde die Willensbekundung noch nicht vollständig geprüft und verarbeitet hat. 
+Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. Jede Sammel-Organisation kann via Bürger-Potral prüfen, wie viele Willensbekundungen durch den gesamten Unterschrift durch sie gesammelt wurden. Dazu kann das Portal die Sammelorganisation-ID an den Tresor senden und dieser antwortet, ob die Willensbekundung vorhanden ist oder nicht. Falls diese nicht vorhanden ist, kann es sein, dass die Gemeinde die Willensbekundung noch nicht vollständig geprüft und verarbeitet hat. 
 
 **Anforderungen:**
 - Login für Kanzlei und Zugriffssteuerung auf jeweilige Volksbegehren auf Stufe Bund, Kanton oder Gemeinde

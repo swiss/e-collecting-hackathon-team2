@@ -224,37 +224,6 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 - Jorgo Ananiadis
 
 ## Mermaid
-
-```mermaid
----
-config:
-  theme: redux
-  layout: dagre
----
-flowchart TB
-    C(["Citizen"]) <-- "Signs Init/Ref, gets personal GUID" --> P(("n Platforms"))
-    P == "AHVN-13, GUID, Issue-ID, Date" ==> M(["Municipality"])
-    U(["User/Comitee"]) -- "Opens Init/Ref on Platform" --> P
-    M == "GUID, Issue-ID, n paper based signatures" ==> V["E-Collecting-Vault"]
-    P <-- Query GUID --> V
-    V -. Opens if Init is submitted .-> Ch(["Chancelery"])
-    M -- THX --> P
-    Ch == "Issue-ID, Type, from/to, Level, BFS-ID" ==> OGD["OGD"]
-    OGD -- "Issue-IDs" --> M & P
-    C <-- Query GUID --> V
-    U <-- Paper Forms --> M
-    OGD@{ shape: cyl}
-     P:::Pine
-     M:::Pine
-     U:::Pine
-     V:::Sky
-     Ch:::Pine
-    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
-    classDef Pine stroke-width:4px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
-    classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
-```
-
-
 ```mermaid
 ---
 config:

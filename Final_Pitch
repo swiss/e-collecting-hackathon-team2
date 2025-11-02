@@ -1,0 +1,60 @@
+Sehr geehrter Herr Bundeskanzler,
+sehr geehrte Anwesende,
+
+Wir sind mit der Grundidee gestartet: E-Collecting – vom bestehenden Stimmregister aus gedacht.
+Diesen Ansatz haben wir die letzten 2 Tage intensiv diskutiert, modelliert und weiterentwickelt.
+
+________________________________________
+1. Ausgangspunkt
+In der Schweiz prüfen Städte und Gemeinden alle Unterschriften – für eidgenössische, kantonale und kommunale Volksbegehren.
+Sie tun das seit Jahrzehnten zuverlässig – und sie geniessen dabei ein ausserordentlich hohes Vertrauen.
+Darauf bauen wir auf. Wir wollen kein neues Parallelsystem schaffen,
+sondern die bestehende, föderale Struktur digital erweitern.
+
+________________________________________
+2. Der dezentrale Ansatz
+Im Zentrum steht ein einfaches Prinzip:
+Die sensiblen Personendaten bleiben bei den Gemeinden.
+Dort, wo sie heute schon liegen und gepflegt werden. 
+Die Gemeinden prüfen weiterhin Stimmberechtigung und Mehrfachunterschriften  –
+egal ob die Unterschrift auf Papier oder digital erfolgt.
+Beide Kanäle laufen auf derselben Datenbasis zusammen.
+Neu ist die digitale Willensbekundung, technisch abgebildet durch eine eindeutige Kennung – die E-Collecting - GUID.
+Diese wird im Bürgerportal erzeugt und zusammen mit entsprechenden Volksbegehren und der Personen-Identifikation  über Sedex, den sicheren Datentransport, an die zuständige Gemeinde übermittelt.
+Dort erfolgt – wie heute – die Prüfung anhand des Stimmregisters.
+Nach der Validierung wird nur die anonymisierte E-Collecting-GUID im sogenannten E-Collecting-Tresor gespeichert.
+Dieser Tresor enthält keine Personendaten – sondern ausschliesslich geprüfte, anonymisierte Einträge pro Volksbegehren.
+
+Zugriff auf diesen Tresor erhalten  das Komitee, registrierte Sammelorganisationen
+und nach Freigabe durch das Komitee (also der Einreichung) auch die jeweilige Kanzlei.
+So bleibt der Prozess transparent und nachvollziehbar, ohne dass sensible Daten zentral gespeichert werden.
+
+Und je nach Konzeption könnte auch ein Bürger selbst prüfen,
+ob seine Willensbekundung korrekt gespeichert wurde.
+Damit schaffen wir ein Höchstmass an Transparenz und Vertrauen in den digitalen Prozess.
+
+________________________________________
+3. Standardisierung und Interoperabilität
+Damit dieser Prozess in der ganzen Schweiz funktioniert, braucht es gemeinsame Regeln.
+Hier setzen wir auf eCH-Standards – für Datenstrukturen, Schnittstellen und Meldeflüsse.
+Alle beteiligten Systeme sprechen dieselbe Sprache. So entsteht Interoperabilität, Offenheit und Wettbewerb.
+Mehrere Portale können existieren, verschiedene Softwarelösungen in den Gemeinden –
+aber alle nutzen dieselben Standards und denselben sicheren Datentransfer über Sedex.
+Und: Die Metadaten der Volksbegehren werden über die Open-Government-Data-Plattform bereitgestellt
+und deren technische Implementation ist auf i14y publiziert.
+So sind neue oder laufende Initiativen jederzeit für alle Akteure abrufbar – transparent und standardisiert.
+
+________________________________________
+4. Das Ergebnis
+Mit unserem Konzept schaffen wir eine föderal abgestützte, technische Lösung,
+die bestehende Infrastrukturen nutzt . 
+•	Dezentral: Die Daten bleiben bei den Gemeinden.
+•	Standardisiert: Die Schnittstellen basieren auf eCH und sind interoperabel.
+•	Minimal-Invasive: Risikominimiert mit übersichtlichen kompakten Bestandteilen
+
+
+Wer tiefer einsteigen möchte:
+Unser Git-Repository enthält alle erarbeiteten Unterlagen, detaillierte Prozessbeschreibungen und erste XSD-Drafts von neuen eCH-Standards. 
+Wir laden euch ein, hineinzuschauen, mitzudenken und weiterzubauen. Der Hackathon war ein Anfang – die Diskussion und die Entwicklung gehen weiter.
+Gerne stehen wir auch in Zukunft für Austausch und Zusammenarbeit zur Verfügung.
+Vielen Dank.

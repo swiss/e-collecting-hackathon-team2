@@ -47,10 +47,10 @@ Parallel werden Volksbegehren und Metadaten über die Open-Government-Data-Platt
 
 **Vorteile**
 
-Vertrauenswürdigkeit: Die Gemeinden bleiben zentrale Prüfstellen und behalten die Datenhoheit.
-Skalierbarkeit: Das Modell funktioniert föderal über alle Ebenen hinweg.
-Datenschutz: Es erfolgt keine Speicherung personenbezogener Daten ausserhalb des Gemeinde Fachsystems. 
-Nachvollziehbarkeit: Einheitliche Identifikatoren (EC-GUID/P-GUID) und standardisierte Schnittstellen sichern Konsistenz und Prüfbarkeit.
+Vertrauenswürdigkeit: Die Gemeinden bleiben zentrale Prüfstellen und behalten die Datenhoheit.  
+Skalierbarkeit: Das Modell funktioniert föderal über alle Ebenen hinweg.  
+Datenschutz: Es erfolgt keine Speicherung personenbezogener Daten ausserhalb des Gemeinde Fachsystems.   
+Nachvollziehbarkeit: Einheitliche Identifikatoren (EC-GUID/P-GUID) und standardisierte Schnittstellen sichern Konsistenz und Prüfbarkeit.  
 
 **Nächste Schritte**
 

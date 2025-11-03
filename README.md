@@ -208,7 +208,7 @@ Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschlu
 
 <img width="1606" height="1102" alt="image" src="docs/Prozessübersicht.png" />
 
-## Topics addressed
+## Prozess-Schritte
 
 | Prozess-Schritt | Beschreibung | Akteur |
 | -| ------- |-|

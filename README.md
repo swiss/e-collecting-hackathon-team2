@@ -118,7 +118,7 @@ Die Kernfunktionen sind:
 3.	Bewusste Willensbekundung, optional mit zusätzlicher Verifikation (z. B. Video-Ident, 2FA).
 4.	Rückgabe der ecGUID als Bestätigung in unterschiedlicher Form (z. B. Bild, Verifiable Credential, E-Mail) mit dem Hinweis: „Lade deine Bestätigung herunter.“
 
-*Sammel-Organisationen*
+*Sammel-Organisationen*  
 Eine Sammel-Organisationen registriert sich auf einem Portal und kann über diesen Zugang:
 - Sammelaktionen verwalten und
 - einen individuellen QR-Code generieren, der eine spätere Auswertung aller digital gesammelten Willensbekundungen dieser Organisation ermöglicht.

@@ -123,16 +123,16 @@ Eine Sammel-Organisationen registriert sich auf einem Portal und kann über dies
 - Sammelaktionen verwalten und
 - einen individuellen QR-Code generieren, der eine spätere Auswertung aller digital gesammelten Willensbekundungen dieser Organisation ermöglicht.
 
-*Übermittlung an die Gemeinde*
+*Übermittlung an die Gemeinde*  
 Nach erfolgreicher Willensbekundung wird der entsprechende Datensatz über die Sedex-Schnittstelle an die zuständige Gemeinde übermittelt (siehe [eCH-02XY](docs/eCH-02XY-1-0.xsd)). </br>
 Die Gemeinde bestätigt den technischen Empfang durch eine Sedex-Quittung, verarbeitet die Meldung jedoch asynchron.
 
-*Struktur der ecGUID*
+*Struktur der ecGUID*  
 Die ecGUID dient als technische Kennung einer digitalen Willensbekundung und setzt sich wie folgt zusammen:
-[ID-Portal]_[ID-Sammlung]_[GUID]
+[ID-Portal]_[ID-SammelOrg]_[GUID]
 Definitionen:
 - ID-Plattform: Eindeutige Teilnehmer-ID der Plattform (z. B. Sedex-ID)
-- ID-Sammlung: Optionale Kennung zur Identifikation einer Sammel-Organisation
+- ID-SammelOrg: Optionale Kennung zur Identifikation einer Sammel-Organisation
 - GUID: Systemgenerierte, eindeutige Kennung der Willensbekundung, ohne personenbezogene Informationen
 - Weitere Metadaten:
   - Zeitstempel der Willensbekundung
@@ -184,23 +184,27 @@ Eine Willensbekundung enthält folgende Daten:
 
 In diesem Tresor werden alle Willensbekundungen gehalten. Dieser Tresor enthält jedoch keine Informationen zu Personendaten und enthält somit keine sensiblen Datensätze um zu einer Gesinnungsdatenbank zu werden.  
 
-Die Datenbank ist unterteilt in einen geschlossene und einen freigegebene Datenbereich. Die Kanzlei hat Einsicht in den freigebenen Datenbereich und kann die Willensbekundungen nach Ablauf und Einreichung der Sammelfrist ansehen und prüfen. 
+Die Datenbank ist unterteilt in einen geschlossene und einen freigegebene Datenbereich. 
+Auf den geschlossenen Bereich (nur bei Initiativen) hat das Komitee Zugriff und kann somit den Fortschritt der Sammlung prüfen. Das Komitee entscheidet am Tag X die Initiative bei der Kanzlei einzureichen (GUIDS in freigegeben Bereich verschieben) oder die Initiative zurückzuziehen. (Keine Freigabe)
+Die Kanzlei hat Einsicht in den freigebenen Datenbereich und kann die Willensbekundungen nach Ablauf der Sammelfrist und Einreichung/Freigabe durch das Komitee ansehen und prüfen. 
 
-Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. Jede Sammel-Organisation kann via Bürger-Potral prüfen, wie viele Willensbekundungen durch den gesamten Unterschrift durch sie gesammelt wurden. Dazu kann das Portal die Sammelorganisation-ID an den Tresor senden und dieser antwortet, ob die Willensbekundung vorhanden ist oder nicht. Falls diese nicht vorhanden ist, kann es sein, dass die Gemeinde die Willensbekundung noch nicht vollständig geprüft und verarbeitet hat, oder aber, dass die Person nicht stimmberechtigt war (aufgrund fehlender Voraussetzungen oder aufgrund bereits erfolgter Unterschrift auf elektronischem oder herkömmlichem Weg). 
+Der Tresor enthält auch eine Schnittstelle zur Prüfung der Willensbekundung. Jede Sammel-Organisation kann via Bürger-Potral prüfen, wie viele Willensbekundungen durch sie gesammelt wurden. Dazu kann das Portal die Sammelorganisation-ID an den Tresor senden und erhält die Anzahl Unterschriften/GUIDS. 
+Auch Bürger:innen können prüfen, ob ihre Willenbekundung im Tresor korrekt gespeichert wird. Dazu senden sie über das Bürgerportal ihre GUID (ohne Personenkennung) an den Tresor. Dieser antwortet, ob die Willensbekundung vorhanden ist oder nicht. Falls diese nicht vorhanden ist, kann es sein, dass die Gemeinde die Willensbekundung noch nicht vollständig geprüft und verarbeitet hat, oder aber, dass die Person nicht stimmberechtigt war (aufgrund fehlender Voraussetzungen oder aufgrund bereits erfolgter Unterschrift auf elektronischem oder herkömmlichem Weg). 
 
 **Anforderungen:**
 - Login für Kanzlei und Zugriffssteuerung auf jeweilige Volksbegehren auf Stufe Bund, Kanton oder Gemeinde
 - Login für Komitee bei einer Initiative
 - Schnittstelle für Sammelorganisation
+- Schnittstlele für Abfrage Bürger GUID
 - Freigabe und Rückzugsmöglichkeit durch Komitee
 
 ### Kanzlei (Bundeskanzlei, Kantons- resp. Staatskanzlei, Gemeindekanzlei)
 
-Ein Komitee möchte eine neue Initiative lancieren. Dazu wird diese Initiative bei der Kanzlei eingereicht. Je nachdem, ob die Initiative auf Bundes-, Kantons- oder Gemeindeebene eingereicht wurde, wird die entsprechende Kanzlei damit beauftragt, die Initiative zu prüfen. Wenn die Initiative bewilligt wird, wird sie im nächsten Schritt im entsprechenden Publikationsorgan (Bundesblatt, Amtsblatt etc.) und zusätzlich im Open-Government-Data-Portal veröffentlicht. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Initiativbezeichnung oder das Komitee.
+Ein Komitee möchte eine neue Initiative lancieren. Dazu wird diese Initiative bei der Kanzlei eingereicht. Je nachdem, ob die Initiative auf Bundes-, Kantons- oder Gemeindeebene eingereicht wurde, wird die entsprechende Kanzlei damit beauftragt, die Initiative zu prüfen. Wenn die Initiative bewilligt wird, wird sie im nächsten Schritt im entsprechenden Publikationsorgan (Amtsblatt, bk.admin.ch, etc.) und zusätzlich im Open-Government-Data-Portal veröffentlicht. Dabei erhält die Initiative eine eindeutige Identifikation, die sogenannte **ID-Volksbegehren**, sowie die dazugehörigen Metadaten wie die Sammelfrist, die Initiativbezeichnung oder das Komitee.
 
 Pro Initiative erstellt die Kanzlei im E-Collecting-Tresor des Bundes ein Login für das Komitee. Dieses Login ermöglicht dem Komitee, auf die gesammelten Unterschriften zuzugreifen und diese bei Abschluss freizugeben, ähnlich wie bei Unterschriften auf Papier, die bei der Kanzlei eingereicht werden. Dieses Login wird auf Stufe Bund, Kanton oder Gemeinde erstellt.
 
-Möchte das Initiativkomitee die Initiative zurückziehen, ist auch dies möglich. Der Rückzug einer Initiative wird bei der Kanzlei eingereicht, die daraufhin den gesamten Tresor mit allen bereits vorhandenen Willensbekundungen entfernt bzw. löscht, sodass niemand außer dem Komitee erfährt, wie viele Stimmen effektiv abgegeben wurden.
+Möchte das Initiativkomitee die Initiative zurückziehen, ist auch dies möglich. Der Rückzug einer Initiative wird bei der Kanzlei eingereicht, die daraufhin den gesamten Tresor mit allen bereits vorhandenen Willensbekundungen entfernt bzw. löscht, sodass niemand ausser dem Komitee erfährt, wie viele Stimmen effektiv abgegeben wurden.
 
 Jeder referendumsfähige Beschluss wird publiziert. Neu wird auch dieser Beschluss im Open-Government-Data-Portal veröffentlicht. Falls der Beschluss noch keine ID-Volksbegehung hat, wird diese bei der Veröffentlichung generiert. Auch bei einem Referendum werden Metadaten hinzugefügt, beispielsweise die Referendumsfrist oder die Bezeichnung des Beschlusses.
 
